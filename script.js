@@ -6,7 +6,6 @@ var dateTimeEl = document.querySelector('#currentDay')
 //hit save to save your entry in the calendar
 
 
-
 // handle displaying the time
 function displayTime() {
     var rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
