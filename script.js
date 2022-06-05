@@ -8,6 +8,6 @@ var RightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
 
 // handle displaying the time
 function displayTime() {
-    dateTimeEl.append(rightNow);
+    dateTimeEl.textContent(rightNow);
   }
 
