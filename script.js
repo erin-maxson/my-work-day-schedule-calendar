@@ -45,7 +45,7 @@ function displayTimeColor() {
             currentTextEl.addClass("present")
         }
 
-        else {
+        else if (currentHour < timeBlockArr) {
             // this adds the future class to the time selected if the time is in the future.
             currentTextEl.addClass("future")
         }
