@@ -29,11 +29,25 @@ var currentHour = moment().hour()
 // logs the hours into the console
 console.log(currentHour)
 
+// function provides time blocks with the correct color coding
 function displayTimeColor() {
+    // for loop runs through the time block array
     for (var i = 0; i < timeBlockArr.length; i++) {
+        // this variable grabs the ID of the html elements inside the time block array
+        var currentTextEl = $("#" + timeBlockArr[i])
         //this if would be past
         if (currentHour > timeBlockArr[i]) {
-            $("#" + timeBlockArr[i])
+            // this adds the class past to the time block if the time is in the past
+            currentTextEl.addClass("past")
+        }
+        // this is compares the current hour to the time selected to list it as present if true
+        else if (currentHour === timeBlockArr[i]) {
+            currentTextEl.addClass("present")
+        }
+
+        else {
+            // this adds the future class to the time selected if the time is in the future.
+            currentTextEl.addClass("future")
         }
     }
 }
