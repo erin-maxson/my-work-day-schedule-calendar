@@ -34,7 +34,7 @@ function displayTimeColor() {
     // for loop runs through the time block array
     for (var i = 0; i < timeBlockArr.length; i++) {
         // this variable grabs the ID of the html elements inside the time block array
-        var currentTextEl = $("9" + timeBlockArr[i])
+        var currentTextEl = $("#" + timeBlockArr[i])
         //this if would be past
         if (currentHour > timeBlockArr[i]) {
             // this adds the class past to the time block if the time is in the past
@@ -51,3 +51,5 @@ function displayTimeColor() {
         }
     }
 }
+
+displayTimeColor()
