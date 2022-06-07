@@ -54,6 +54,10 @@ function displayTimeColor() {
 
 displayTimeColor()
 
-var saveText = $("text-input")
+var retrieveText = $("text-input")
+var saveTextBtn = $("saveBtn")
 
-localStorage.setItem('saveText', "")
+$(saveTextBtn).on('click', function() {
+    localStorage.setItem('retrieveText', retrieveText)
+    console.log(retrieveText)
+})
