@@ -53,3 +53,7 @@ function displayTimeColor() {
 }
 
 displayTimeColor()
+
+var saveText = $("text-input")
+
+localStorage.setItem('saveText', "")
