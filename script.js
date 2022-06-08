@@ -50,6 +50,12 @@ function displayTimeColor() {
             // this adds the future class to the time selected if the time is in the future.
             currentTextEl.addClass("future")
         }
+
+        var event = localStorage.getItem(standardTime[i])
+
+        if (event) {
+            $('#' + timeBlockArr[i]).val(event)
+        }
     }
 }
 
@@ -57,11 +63,7 @@ displayTimeColor()
 
 function displayTimeBlock() {
     for(var i=0; i < standardTime.length; i++) {
-        var event = localStorage.getItem(standardTime[i])
-
-        if (event) {
-            
-        }
+        
     }
 }
 
@@ -70,7 +72,7 @@ var saveTextBtn = $("saveBtn")
 
 saveTextBtn.on("click", function() {
     var hour = $(this).siblings(".hour").text()
-    var input = $(this).siblings(".desc").val()
+    var input = $(this).siblings(".description").val()
 
     localStorage.setItem(hour, input);
 }
