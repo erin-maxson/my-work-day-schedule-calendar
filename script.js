@@ -54,10 +54,13 @@ function displayTimeColor() {
 
 displayTimeColor()
 
-var retrieveText = $("text-input")
+var retrieveText = $('text-input').data()
 var saveTextBtn = $("saveBtn")
 
-$(saveTextBtn).on('click', function() {
-    localStorage.setItem('retrieveText', retrieveText)
-    console.log(retrieveText)
-})
+saveTextBtn.on("click", function() {
+    var hour = $(this).siblings(".hour").text()
+    var input = $(this).siblings("")
+}
+)
+
+localStorage.setItem(retrieveText)
