@@ -59,7 +59,6 @@ function displayTimeColor() {
     }
 }
 
-var retrieveText = $('text-input').data()
 var saveTextBtn = $("saveBtn")
 
 saveTextBtn.on("click", function() {
