@@ -23,6 +23,7 @@ currentDay.text(systemTime)
 
 // variable timeBlockArr creates an array to translate current time format to military time
 var timeBlockArr = [9,10,11,12,13,14,15,16,17]
+var standardTime = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"]
 
 // formats the time shown into hours
 var currentHour = moment().hour()
@@ -54,13 +55,23 @@ function displayTimeColor() {
 
 displayTimeColor()
 
+function displayTimeBlock() {
+    for(var i=0; i < standardTime.length; i++) {
+        var event = localStorage.getItem(standardTime[i])
+
+        if (event) {
+            
+        }
+    }
+}
+
 var retrieveText = $('text-input').data()
 var saveTextBtn = $("saveBtn")
 
 saveTextBtn.on("click", function() {
     var hour = $(this).siblings(".hour").text()
-    var input = $(this).siblings("")
+    var input = $(this).siblings(".desc").val()
+
+    localStorage.setItem(hour, input);
 }
 )
-
-localStorage.setItem(retrieveText)
