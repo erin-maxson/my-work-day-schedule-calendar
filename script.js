@@ -59,14 +59,6 @@ function displayTimeColor() {
     }
 }
 
-displayTimeColor()
-
-function displayTimeBlock() {
-    for(var i=0; i < standardTime.length; i++) {
-        
-    }
-}
-
 var retrieveText = $('text-input').data()
 var saveTextBtn = $("saveBtn")
 
@@ -75,5 +67,8 @@ saveTextBtn.on("click", function() {
     var input = $(this).siblings(".description").val()
 
     localStorage.setItem(hour, input);
+    displayTimeColor()
 }
 )
+
+displayTimeColor()
