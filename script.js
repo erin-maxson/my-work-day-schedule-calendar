@@ -59,15 +59,15 @@ function displayTimeColor() {
     }
 }
 
-var saveTextBtn = $("saveBtn")
+// var saveTextBtn = $("saveBtn")
 
-saveTextBtn.on("click", function() {
-    var hour = $(this).siblings(".hour").text()
-    var input = $(this).siblings(".description").val()
+// saveTextBtn.on("click", function() {
+//     var hour = $(this).siblings(".hour").text()
+//     var input = $(this).siblings(".description").val()
 
-    localStorage.setItem(hour, input);
-    displayTimeColor()
-}
-)
+//     localStorage.setItem(hour, input);
+//     displayTimeColor()
+// }
+// )
 
 displayTimeColor()
