@@ -66,15 +66,13 @@ var saveTextBtn = $(".saveBtn")
 // When you click on the save button, it captures the hour and the input inside the description to log it into the console and local storage
 saveTextBtn.on("click", function() {
     var hour = $(this).siblings(".hour").text()
-    var input = $(this).siblings(".description").text()
-
-    
+    var description = $(this).siblings(".description").text()
 
     localStorage.setItem("hour", hour)
-    localStorage.setItem("input", input)
+    localStorage.setItem("description", description)
 
     console.log(hour)
-    console.log(input)
+    console.log(description)
 
     displayTimeColor()
 })
