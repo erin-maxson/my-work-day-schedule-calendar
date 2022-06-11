@@ -52,6 +52,7 @@ function displayTimeColor() {
         }
 
         var event = localStorage.getItem(standardTime[i])
+        console.log(event)
 
         if (event) {
             $('#' + timeBlockArr[i]).val(event)
@@ -59,15 +60,16 @@ function displayTimeColor() {
     }
 }
 
-// var saveTextBtn = $("saveBtn")
+var saveTextBtn = $(".saveBtn")
 
-// saveTextBtn.on("click", function() {
-//     var hour = $(this).siblings(".hour").text()
-//     var input = $(this).siblings(".description").val()
+saveTextBtn.on("click", function() {
+    var hour = $(this).siblings(".hour").text(this)
+    var input = $(this).siblings(".description").text(this)
 
-//     localStorage.setItem(hour, input);
-//     displayTimeColor()
-// }
-// )
+    console.log(hour)
+    console.log(input)
+
+    displayTimeColor()
+})
 
 displayTimeColor()
