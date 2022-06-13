@@ -65,8 +65,8 @@ var saveTextBtn = $(".saveBtn")
 
 // When you click on the save button, it captures the hour and the input inside the description to log it into the console and local storage
 saveTextBtn.on("click", function() {
-    var hour = $(this).siblings(".hour").text()
-    var description = $(this).siblings(".description").text()
+    var hour = $(this).attr(".hour");
+    var description = $('textarea').val();
 
     localStorage.setItem("hour", hour)
     localStorage.setItem("description", description)
